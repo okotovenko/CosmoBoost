@@ -321,7 +321,8 @@ h2.subtitle {
   left: 0;
   top: -30%;
   -webkit-transform: scale(1.05) translateX(-8%);
-  transform: scale(1.05) translateX(-8%)
+  transform: scale(1.05) translateX(-8%);
+  z-index: 1
 }
 .hero__img>img,
 .hero__img>picture {
@@ -496,20 +497,13 @@ h2.subtitle {
   margin-bottom: .75rem;
   position: relative
 }
-.hero__price span {
-  position: relative
+.hero__price i {
+  font-style: normal
 }
-.hero__price span::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 100%;
-  height: .3125rem;
-  background: #42545f
+.hero__price span {
+  position: relative;
+  text-decoration: line-through;
+  text-decoration-color: #42545f
 }
 .hero__price::before {
   content: "";
@@ -889,6 +883,7 @@ h2.subtitle {
   margin-bottom: .3125rem
 }
 .effects__bottom>span {
+  text-align: center;
   font-weight: 300;
   color: #2d404f
 }
@@ -1745,6 +1740,9 @@ h2.subtitle {
   .cases__container {
     padding-bottom: 3.125rem
   }
+  .cases__container h2 {
+    margin-bottom: 2.875rem
+  }
   .cases__container>span {
     font-size: 1rem
   }
@@ -2198,6 +2196,9 @@ h2.subtitle {
   .cases__container {
     padding-bottom: 1.5rem
   }
+  .cases__container h2 {
+    margin-bottom: 2.125rem
+  }
   .cases__container>span {
     font-size: .75rem
   }
@@ -2454,6 +2455,9 @@ h2.subtitle {
   .hero__bottom>a {
     margin-bottom: 1.6875rem
   }
+  .hero__price i {
+    display: block
+  }
   .hero__last {
     font-weight: 400
   }
@@ -2500,6 +2504,9 @@ h2.subtitle {
   }
   .get__questions :nth-child(even).get__question {
     background: rgba(45,64,79,.05)
+  }
+  .get__box {
+    grid-template-columns: auto
   }
   .get__question p {
     font-weight: 400
@@ -2848,6 +2855,9 @@ h2.subtitle {
   }
   .cases__container {
     padding-bottom: clamp(1.5rem ,.9347826087rem + 2.8260869565vw ,3.125rem)
+  }
+  .cases__container h2 {
+    margin-bottom: clamp(2.125rem ,1.8641304348rem + 1.3043478261vw ,2.875rem)
   }
   .cases__container>span {
     font-size: clamp(.75rem ,.6630434783rem + .4347826087vw ,1rem)
